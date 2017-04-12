@@ -11,6 +11,8 @@ concat = require('gulp-concat'),
 // minifying files
 uglify = require('gulp-uglify'),
 
+exec = require('child_process').exec,
+
 // nodejs module for starting and restarting server
 nodemon = require('gulp-nodemon');
 
@@ -19,6 +21,13 @@ gulp.task('build', function(){
   // copying node_modules to public lib
     gulp.src('node_modules/**/*')
       .pipe(gulp.dest('public/lib'));
+
+    // executing command in public folder
+    exec('bower install', { cwd: 'public/' }, function (err, stdout, stderr) {
+      console.log(stdout);
+      console.log(stderr); 
+      console.log(err);
+    });
 
 });
 

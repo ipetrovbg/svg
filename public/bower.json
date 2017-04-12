@@ -1,0 +1,20 @@
+{
+  "name": "svg",
+  "homepage": "https://github.com/ipetrovbg/boilerplate",
+  "authors": [
+    "ipetrovbg <ipetrovbg@gmail.com>"
+  ],
+  "description": "svg examples",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "svg.draggable.js": "^2.2.1"
+  }
+}
